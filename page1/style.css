@@ -1,0 +1,104 @@
+body {
+    max-width: 1920px;
+    max-height: 900px;
+    background: #f3f3f3;
+    font-family: "Ubuntu", sans-serif;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 54% 45%;
+    grid-template-areas: "first second" "first third";
+  }
+  
+  h1 {
+    color: #0b64fe;
+    max-width: 646.75px;
+    max-height: 218.63px;
+    font-size: 57px;
+    line-height: 100%;
+  }
+  
+ .text1{grid-area: second}
+ .text2{grid-area: third}
+  .text1,.text2{
+    width:100%;margin-right: 10px;
+  }
+
+  .text1 p,
+  .text2 p {
+    display: flex;
+    max-width: 500px;
+    max-height: 416px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 170%;
+    
+  }
+  
+  .bl_image{grid-area: first; 
+    display:flex;
+    flex-direction: column;
+      
+  }
+  .image{display:flex;flex-direction: column; 
+   align-items: center;
+   justify-content: center;
+   position:relative;
+   padding-bottom: 80%;
+   
+   width:100%;
+   margin:auto;
+   }
+   .el_im{position:absolute;top:0;
+    
+   /* min-width:400px;*/
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+  .img1,.img2{/*position:absolute;top:0;*/
+    width: 120%;height: 120%;
+    object-fit: contain;
+    flex-shrink: 0;
+   }
+ 
+   .el1, .el2 {
+    background-image: url("Ellipse\ 179.png");
+    background-size:contain;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:16px;
+
+    position:absolute;
+    width: 12%;
+    height: calc(15%);
+    border-radius: 50%;
+    cursor:pointer;
+    z-index:100;
+  }
+  
+  .el1 {left: 36.5%; top:55%;}
+  .el2 {left: 53.5%; top:55%;}
+
+  
+  @media (max-width:320px) {
+    body {grid-template-columns: 100%;
+      grid-template-areas: "first" "second" "third";
+    }
+
+      .text1{grid-area: first;}
+
+      .bl_image{grid-area: second;} 
+
+      .text2{grid-area: third;}
+
+      .text1 p,.text2 p {font-size: 16px;}
+
+      h1 {font-size: 33px;text-transform:uppercase;
+        font-family: 'Bebas Neue';font-weight: 700;}
+
+      .el1, .el2 {font-size:12px;}
+  }
